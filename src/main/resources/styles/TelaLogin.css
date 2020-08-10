@@ -1,0 +1,26 @@
+.button {
+    -fx-font-weight: bold;
+}
+.backgroundTelaLogin{
+    -fx-background-color: #808080;
+}
+.paneCabecalho{
+    -fx-background-color: #4169E1;
+    
+}
+.botaoEntrar{
+    -fx-background-color: #4169E1;
+}
+.botaoSair{
+    -fx-background-color: #4169E1;
+}
+.botaoEntrar:hover{
+    -fx-background-color: #136207;
+}
+.botaoSair:hover{
+    -fx-background-color: #9b1c31;
+    -fx-text-fill: #FFFFFF;
+}
+.lblEsqueciMinhaSenha:hover{
+    -fx-text-fill: #4169E1;
+}

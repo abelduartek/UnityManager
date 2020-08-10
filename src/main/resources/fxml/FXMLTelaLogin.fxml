@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox fx:id="vboxPrincipal" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="485.0" prefWidth="340.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.unitymanager.controller.FXMLTelaLoginController">
+   <children>
+      <Pane fx:id="paneCabecalho" prefHeight="105.0" prefWidth="313.0" styleClass="paneCabecalho" stylesheets="@../styles/TelaLogin.css">
+         <children>
+            <Label fx:id="lblTItuloEmpresa" layoutX="86.0" layoutY="33.0" text="UnityManager" textFill="WHITE">
+               <font>
+                  <Font size="27.0" />
+               </font>
+            </Label>
+         </children>
+         <effect>
+            <DropShadow />
+         </effect></Pane>
+      <VBox prefHeight="381.0" prefWidth="313.0" VBox.vgrow="NEVER">
+         <children>
+            <JFXTextField fx:id="txtUsuario" focusColor="ROYALBLUE" maxWidth="250.0" minHeight="-Infinity" minWidth="-Infinity" translateX="45.0" translateY="60.0" unFocusColor="#a1a1a1" />
+            <JFXPasswordField fx:id="txtSenha" focusColor="ROYALBLUE" maxWidth="250.0" translateX="45.0" translateY="90.0" unFocusColor="#a1a1a1" />
+            <Label fx:id="lblEsqueciMinhaSenha" styleClass="lblEsqueciMinhaSenha" stylesheets="@../styles/TelaLogin.css" text="Esqueci minha senha" translateX="45.0" translateY="120.0" />
+            <JFXButton fx:id="btnEntrar" buttonType="RAISED" maxHeight="100.0" maxWidth="120.0" onAction="#actionButtonEntrar" ripplerFill="ROYALBLUE" styleClass="botaoEntrar" stylesheets="@../styles/TelaLogin.css" text="Entrar" textFill="WHITE" translateX="45.0" translateY="150.0" />
+            <JFXButton fx:id="btnSair" buttonType="RAISED" maxWidth="120.0" onAction="#actionButtonSair" ripplerFill="#e04141" styleClass="botaoSair" stylesheets="@../styles/TelaLogin.css" text="Sair" textFill="WHITE" translateX="175.0" translateY="125.0" />
+            <Label text="Todos os direitos reservados. Abel Duarte 2020" translateX="45.0" translateY="240.0" />
+         </children>
+      </VBox>
+   </children>
+</VBox>

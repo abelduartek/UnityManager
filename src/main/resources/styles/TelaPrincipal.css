@@ -1,0 +1,28 @@
+/*As linhas abaixo são responsáveis pelo CSS do rodapé*/
+.paneRodape{
+    -fx-background-color: #4169E1;
+}
+
+/*As linhas abaixo são responsáveis pelo CSS do menu principal*/
+.menu:focused{
+    -fx-background-color: #4169E1;
+}
+.menu:hover {
+    -fx-background-color: #4169E1;
+}
+.menu:showing {
+    -fx-background-color: #4169E1;
+}
+.menu-item:focused{
+    -fx-background-color: #4169E1;
+}
+
+
+/*As linhas abaixo são responsáveis pelo CSS tab-pane e tab*/
+.tab-pane .tab-header-area .tab-header-background {
+    -fx-background-color: #4169E1;
+}
+.tab{
+    -fx-min-width: 120px;
+    -fx-min-height: 23px;
+}

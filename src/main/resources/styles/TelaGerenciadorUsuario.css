@@ -1,0 +1,21 @@
+.mainFxmlClass {
+
+}
+.titled-pane > .title{
+    -fx-background-color: #4169E1;
+    -fx-text-fill: #FFFFFF;
+}
+ .table-view{
+    -fx-base: #4169E1;
+    -fx-text-fill: #FFFFFF;
+}
+.table-view .column-header .label {
+    -fx-text-fill: white;
+    -fx-alignment: center;
+    -fx-opacity: 1;
+}
+
+.button:hover .lupa{
+    -fx-fill: #4169E1;
+    
+}
