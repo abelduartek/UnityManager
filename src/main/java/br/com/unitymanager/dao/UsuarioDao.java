@@ -6,6 +6,7 @@ import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 import javax.persistence.Query;
 import br.com.unitymanager.model.Usuario;
+import java.util.ArrayList;
 
 
 
@@ -73,6 +74,17 @@ public class UsuarioDao {
          
         
     
+    }
+    
+    public List<Usuario> listarUsuario(){
+        em.getTransaction().begin();
+        List<Usuario> list = new ArrayList<>();
+        Query resultado = em.createQuery("from Usuario");
+        list = resultado.getResultList();
+        em.getTransaction().commit();
+        emf.close();
+       
+        return list;
     }
 
 }

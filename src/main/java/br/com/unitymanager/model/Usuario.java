@@ -29,7 +29,7 @@ public class Usuario {
 	
 	@NotNull
 	@Column(name = "cpf_usuario")
-	private String cpf;
+	private String doc;
 	
 	@NotNull
 	@Column(name = "rg_usuario")
@@ -122,11 +122,11 @@ public class Usuario {
 	}
 
 	public String getCpf() {
-		return cpf;
+		return doc;
 	}
 
 	public void setCpf(String cpf) {
-		this.cpf = cpf;
+		this.doc = doc;
 	}
 
 	public String getRg() {

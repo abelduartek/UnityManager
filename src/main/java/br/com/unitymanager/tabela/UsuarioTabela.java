@@ -15,21 +15,21 @@ public class UsuarioTabela {
 
     public UsuarioTabela(int id, String cpf, String login, String nome, String telefone, String email) {
 
-        super();
         
-        this.id = new SimpleIntegerProperty();
-        this.cpf = new SimpleStringProperty();
-        this.login = new SimpleStringProperty();
-        this.nome = new SimpleStringProperty();
-        this.telefone = new SimpleStringProperty();
-        this.email = new SimpleStringProperty();
+        this.id = new SimpleIntegerProperty(id);
+        this.cpf = new SimpleStringProperty(cpf);
+        this.login = new SimpleStringProperty(login);
+        this.nome = new SimpleStringProperty(nome);
+        this.telefone = new SimpleStringProperty(telefone);
+        this.email = new SimpleStringProperty(email);
 
 
 
 
     }
+
     
-    public int getId(){
+    public Integer getId(){
         return id.get();
     
     }

@@ -64,7 +64,7 @@ public class FXMLTelaPrincipalController implements Initializable {
     
     @FXML //O método abaixo é responsável por chamar a tela de cadastro de usuário
     void actionButtonMenuCadUsuario(ActionEvent event) throws IOException {
-            
+    
     URL url = getClass().getResource(Constants.telaGerenciadorUsuarioFxml);
     Node node = FXMLLoader.load(url);
     Tab tabCadastroUsuario = new Tab();
@@ -73,6 +73,7 @@ public class FXMLTelaPrincipalController implements Initializable {
     iconTabGerenciadorUsuario.setGlyphSize(18);
     tabCadastroUsuario.contentProperty().set(node);
     tabCadastroUsuario.setText("Gerenciador de Usuário");
+    
     tabPanePrincipal.getTabs().add(tabCadastroUsuario);
 
     }
