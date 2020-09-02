@@ -1,5 +1,6 @@
 package br.com.unitymanager.controller;
 
+import br.com.unitymanager.tab.TabModel;
 import br.com.unitymanager.util.Constants;
 import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon;
 import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView;
@@ -16,10 +17,10 @@ import javafx.scene.control.Label;
 import javafx.scene.control.MenuItem;
 import javafx.scene.control.Tab;
 import javafx.scene.control.TabPane;
+import javafx.scene.control.TreeTableColumn;
+import javafx.scene.control.TreeTableView;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.paint.Color;
-import javafx.scene.paint.Paint;
-import javafx.scene.text.Text;
 
 public class FXMLTelaPrincipalController implements Initializable {
     
@@ -48,34 +49,25 @@ public class FXMLTelaPrincipalController implements Initializable {
     @FXML private Label lblBandoDeDados;
     @FXML public Label lblData;
     @FXML private Button btnTeste;
-    FontAwesomeIconView iconTabGerenciadorUsuario = new FontAwesomeIconView(FontAwesomeIcon.USER);
     
+    
+    TabModel tabModel = new TabModel(); //Responsável por chamar os FXML na TabPrincipal
+    
+  
+    @FXML //O método abaixo é responsável por chamar a tela de cadastro de usuário
+    void actionButtonMenuCadUsuario(ActionEvent event) throws IOException {
+        tabPanePrincipal.getTabs().add(tabModel.tabTelaGerenciadorUsuario());
+    }
     
     @FXML
-    void action(ActionEvent event) {
-        
+    void actionButtonMenuCadOS(ActionEvent event) throws IOException {
+        tabPanePrincipal.getTabs().add(tabModel.tabTelaGerenciadorOS());
     }
-
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
        
     }
     
-    @FXML //O método abaixo é responsável por chamar a tela de cadastro de usuário
-    void actionButtonMenuCadUsuario(ActionEvent event) throws IOException {
-    
-    URL url = getClass().getResource(Constants.telaGerenciadorUsuarioFxml);
-    Node node = FXMLLoader.load(url);
-    Tab tabCadastroUsuario = new Tab();
-    tabCadastroUsuario.setGraphic(iconTabGerenciadorUsuario);
-    iconTabGerenciadorUsuario.setFill(Color.rgb(65,105,225));
-    iconTabGerenciadorUsuario.setGlyphSize(18);
-    tabCadastroUsuario.contentProperty().set(node);
-    tabCadastroUsuario.setText("Gerenciador de Usuário");
-    
-    tabPanePrincipal.getTabs().add(tabCadastroUsuario);
-
-    }
     
 }

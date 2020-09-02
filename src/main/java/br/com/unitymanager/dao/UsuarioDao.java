@@ -1,5 +1,6 @@
 package br.com.unitymanager.dao;
 
+import br.com.unitymanager.model.Pessoa;
 import java.util.List;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
@@ -28,15 +29,9 @@ public class UsuarioDao {
     		query.setParameter("lg", usuario);
     		query.setParameter("pw", senha);
     		query.setMaxResults(1);
-
     		
 		listLogin = query.getResultList();
-                
-               
-                        
-                //Usuario nomeUsuario = list.get(5);
-                //System.out.println(nomeUsuario);
-    		
+             
     		if(listLogin.size() == 1 ){
                     return true;
               
@@ -75,7 +70,7 @@ public class UsuarioDao {
         
     
     }
-    
+   
     public List<Usuario> listarUsuario(){
         em.getTransaction().begin();
         List<Usuario> list = new ArrayList<>();
@@ -83,7 +78,6 @@ public class UsuarioDao {
         list = resultado.getResultList();
         em.getTransaction().commit();
         emf.close();
-       
         return list;
     }
 

@@ -1,11 +1,12 @@
 package br.com.unitymanager.controller;
 
 import br.com.unitymanager.dao.UsuarioDao;
+import br.com.unitymanager.entity.UsuarioTabela;
 import br.com.unitymanager.model.Usuario;
-import br.com.unitymanager.tabela.UsuarioTabela;
 import br.com.unitymanager.util.Constants;
 import java.io.IOException;
 import java.net.URL;
+import java.util.Iterator;
 import java.util.List;
 import java.util.ResourceBundle;
 import javafx.collections.FXCollections;
@@ -19,6 +20,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.scene.control.TextField;
 import javafx.scene.control.TitledPane;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.image.Image;
@@ -31,23 +33,15 @@ public class FXMLTelaGerenciadorUsuarioController implements Initializable {
     @FXML private Button btnAdicionar;
     @FXML private TitledPane paneInfo;
     @FXML private TitledPane titledPane;
-    @FXML private TableView<UsuarioTabela> tableViewPrincipal;
-    @FXML private TableColumn<UsuarioTabela, Integer> columnID;
-    @FXML private TableColumn<UsuarioTabela, String> columnCPF;
-    @FXML private TableColumn<UsuarioTabela, String> columnLogin;
-    @FXML private TableColumn<UsuarioTabela, String> columnNome;
-    @FXML private TableColumn<UsuarioTabela, String> columnTelefone;
-    @FXML private TableColumn<UsuarioTabela, String> columnEmail;
+    @FXML private TableView<Usuario> tableViewPrincipal;
+    @FXML private TableColumn<Usuario, Integer> columnID;
+    @FXML private TextField txtNome;
+    @FXML private TextField txtCodigo;
     public static FXMLTelaCadastroUsuarioController controller;
-    
-    private UsuarioDao usuarioDao = new UsuarioDao();
-    
-    private List<Usuario> listUsuario = usuarioDao.listarUsuario();
-    
-    private ObservableList<UsuarioTabela> listUsuarioTabela = FXCollections.observableArrayList();
     
     
    
+    
     @FXML
     void actionBotaoAdicionar(ActionEvent event) throws IOException {
             
@@ -72,31 +66,12 @@ public class FXMLTelaGerenciadorUsuarioController implements Initializable {
     
     @FXML
     void actionBotaoPesquisar(ActionEvent event) {
-
+      
     }
     
-    public void listarUsuario(){
-    
-        for(Usuario usuario : listUsuario){
-            
-         UsuarioTabela usuarioTabela = new UsuarioTabela(usuario.getId(), usuario.getCpf(), usuario.getLogin(), usuario.getNome(), usuario.getTelefone(), usuario.getEmail());
-         listUsuarioTabela.add(usuarioTabela);
-    }
-        
-        columnID.setCellValueFactory(new PropertyValueFactory<UsuarioTabela, Integer>("ID"));
-        columnCPF.setCellValueFactory(new PropertyValueFactory<UsuarioTabela, String>("CPF"));
-        columnLogin.setCellValueFactory(new PropertyValueFactory<UsuarioTabela, String>("Login"));
-        columnNome.setCellValueFactory(new PropertyValueFactory<UsuarioTabela, String>("Nome"));
-        columnTelefone.setCellValueFactory(new PropertyValueFactory<UsuarioTabela, String>("Telefone"));
-        columnEmail.setCellValueFactory(new PropertyValueFactory<UsuarioTabela, String>("Email"));
-        
-        tableViewPrincipal.setItems(listUsuarioTabela);
-        
-    }
-   
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-       listarUsuario();
+       
     }    
     
 }

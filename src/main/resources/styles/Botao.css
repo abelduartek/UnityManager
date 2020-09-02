@@ -1,5 +1,6 @@
 .button {
     -fx-base: #4169E1;
+    
 }
 .button:hover{
     -fx-base: #FFFFFF;

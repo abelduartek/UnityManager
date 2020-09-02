@@ -40,7 +40,18 @@ public class FXMLTelaCadastroUsuarioController implements Initializable {
     
     @FXML
     void actionBotaoAdicionarUsuario(ActionEvent event) {
+        if(txtUsuario.getText().isEmpty() || txtSenha.getText().isEmpty() || txtCPF.getText().isEmpty() 
+        || txtRG.getText().isEmpty() || txtNome.getText().isEmpty() || txtSobrenome.getText().isEmpty()
+        || txtIdade.getText().isEmpty()|| txtDataNascimento.getText().isEmpty() || txtEndereco.getText().isEmpty()
+        || txtBairro.getText().isEmpty() || txtCidade.getText().isEmpty() || txtUF.getText().isEmpty()
+        || txtEstadoCivil.getText().isEmpty() || txtCargo.getText().isEmpty() || txtEmail.getText().isEmpty()
+        || txtTelefone.getText().isEmpty() || txtCelular.getText().isEmpty() || txtSetor.getText().isEmpty() 
+        || txtPerfil.getText().isEmpty()){
         
+        JOptionPane.showMessageDialog(null, "Todos os campos devem ser preenchidos!");
+        
+        
+        }else{
         Usuario user = new Usuario();
         UsuarioDao dao = new UsuarioDao();
         
@@ -69,7 +80,7 @@ public class FXMLTelaCadastroUsuarioController implements Initializable {
         JOptionPane.showMessageDialog(null, "Usuário cadastrado com sucesso!");
         
         limparCampos();
-        
+        }
         
         
     }

@@ -83,7 +83,7 @@ public class FXMLTelaLoginController implements Initializable {
             controller.lblUsuario.setText(dao.usuarioLogado());
             telaPrincipal.show();
         	
-        }else {
+       }else {
         	
         	JOptionPane.showMessageDialog(null, "Usuário Inexistente!");
         }

@@ -16,7 +16,7 @@
         <menus>
           <Menu mnemonicParsing="false" text="Cadastro">
             <items>
-              <MenuItem fx:id="menuCadastroOS" mnemonicParsing="false" text="Ordem de Serviço" />
+              <MenuItem fx:id="menuCadastroOS" mnemonicParsing="false" onAction="#actionButtonMenuCadOS" text="Ordem de Serviço" />
                   <MenuItem fx:id="menuCadastroProduto" mnemonicParsing="false" text="Produto" />
                   <MenuItem fx:id="menuCadastroEmpresa" mnemonicParsing="false" text="Empresa" />
                   <MenuItem fx:id="menuCadastroUsuario" mnemonicParsing="false" onAction="#actionButtonMenuCadUsuario" text="Usuário" />
@@ -76,6 +76,7 @@
             <Label text="Usuário:" textFill="WHITE" translateX="10.0" translateY="5.0" />
             <Label fx:id="lblUsuario" textFill="WHITE" translateX="25.0" translateY="5.0" />
             <Label prefHeight="17.0" prefWidth="93.0" text="Banco de Dados:" textFill="WHITE" translateX="120.0" translateY="5.0" />
+            <Label prefHeight="17.0" prefWidth="93.0" text="UnityManager" textFill="WHITE" translateX="135.0" translateY="5.0" />
             <Label fx:id="lblBandoDeDados" textFill="WHITE" translateX="135.0" translateY="5.0" />
             <Label text="Data:" textFill="WHITE" translateX="230.0" translateY="5.0" />
             <Label fx:id="lblData" textFill="WHITE" translateX="245.0" translateY="5.0" />

@@ -26,17 +26,17 @@
          </graphic></Button>
       <TitledPane fx:id="paneInfo" animated="false" collapsible="false" contentDisplay="TOP" layoutX="38.0" layoutY="28.0" prefHeight="109.0" prefWidth="710.0" stylesheets="@../styles/TelaCadastroUsuario.css" text="Filtros de Pesquisa" textFill="WHITE" AnchorPane.leftAnchor="38.0" AnchorPane.rightAnchor="95.0">
         <content>
-          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+          <AnchorPane fx:id="titledPaneFiltro" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                <children>
                   <Label layoutX="19.0" layoutY="33.0" text="Código:" />
-                  <TextField fx:id="txtPesquisaCodigo" layoutX="75.0" layoutY="29.0" prefHeight="25.0" prefWidth="134.0" AnchorPane.leftAnchor="75.0" />
                   <Label layoutX="247.0" layoutY="33.0" text="Nome:" AnchorPane.leftAnchor="237.39999999999998" />
-                  <TextField fx:id="txtPesquisaNome" layoutX="302.0" layoutY="29.0" prefHeight="25.0" prefWidth="314.0" AnchorPane.leftAnchor="302.0" AnchorPane.rightAnchor="82.39999999999998" />
                   <Button fx:id="btnPesquisar" layoutX="638.0" layoutY="28.0" mnemonicParsing="false" onAction="#actionBotaoPesquisar" prefHeight="27.0" prefWidth="56.0" stylesheets="@../styles/Botao.css" AnchorPane.rightAnchor="14.0">
                      <graphic>
                         <FontAwesomeIconView fill="WHITE" glyphName="SEARCH" size="16" styleClass="lupa" />
                      </graphic>
                   </Button>
+                  <TextField fx:id="txtCodigo" layoutX="68.0" layoutY="29.0" />
+                  <TextField fx:id="txtNome" layoutX="300.0" layoutY="29.0" prefHeight="25.0" prefWidth="310.0" />
                </children>
             </AnchorPane>
         </content>
@@ -48,11 +48,6 @@
                   <TableView fx:id="tableViewPrincipal" layoutX="-2.4000000000000004" layoutY="4.6" prefHeight="295.0" prefWidth="710.0" stylesheets="@../styles/TelaGerenciadorUsuario.css" tableMenuButtonVisible="true" AnchorPane.bottomAnchor="-0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                      <columns>
                         <TableColumn fx:id="columnID" prefWidth="75.0" text="ID" />
-                        <TableColumn fx:id="columnCPF" prefWidth="75.0" text="CPF" />
-                        <TableColumn fx:id="columnLogin" prefWidth="75.0" text="Login" />
-                        <TableColumn fx:id="columnNome" prefWidth="75.0" text="Nome" />
-                        <TableColumn fx:id="columnTelefone" prefWidth="75.0" text="Telefone" />
-                        <TableColumn fx:id="columnEmail" prefWidth="75.0" text="Email" />
                      </columns>
                   </TableView>
                </children>

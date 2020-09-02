@@ -17,7 +17,7 @@ public class Usuario {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "id_usuario")
-	private int id;
+	private long id;
 
 	@NotNull
 	@Column(name = "login_usuario")
@@ -97,7 +97,7 @@ public class Usuario {
 	
 	
 	
-	public int getId() {
+	public long getId() {
 		return id;
 	}
 
@@ -125,7 +125,7 @@ public class Usuario {
 		return doc;
 	}
 
-	public void setCpf(String cpf) {
+	public void setCpf(String doc) {
 		this.doc = doc;
 	}
 
