@@ -1,6 +1,7 @@
 package br.com.unitymanager.controller;
 
 import br.com.unitymanager.dao.UsuarioDao;
+import br.com.unitymanager.stage.Telas;
 import br.com.unitymanager.util.Constants;
 import br.com.unitymanager.util.DataSistema;
 import com.jfoenix.controls.JFXButton;
@@ -38,8 +39,9 @@ public class FXMLTelaLoginController implements Initializable {
     @FXML private TextField teste;
     
     //As linhas abaixo são as instancias de Objetos
-    public static FXMLTelaPrincipalController controller;
+    public static FXMLTelaPrincipalController controllerTelaPrincipal;
     public static DataSistema dataSistema = new DataSistema();
+    public Telas chamandoTela = new Telas();
     
    
     @FXML
@@ -62,29 +64,14 @@ public class FXMLTelaLoginController implements Initializable {
         
         if(dao.login(usuarioTeste, senhaTeste)) //Autenticação de usuário e senha
         {
-            
-            
             //As linhas abaixo são responsáveis por capturar o Stage atual(Tela de Login) e fecha-lá
             Stage telaLogin = (Stage) btnEntrar.getScene().getWindow(); 
             telaLogin.close();
+            chamandoTela.telaPrincipal();
+            chamandoTela.controllerTelaPrincipal.lblData.setText(dataSistema.dataAtual());
+            chamandoTela.controllerTelaPrincipal.lblUsuario.setText(dao.usuarioLogado());
             
-            //As linhas abaixo são responsáveis por chamar a Tela principal e definem o controller da scene
-            Stage telaPrincipal = new Stage();
-            FXMLLoader fxmlLoader = new FXMLLoader();
-            Parent root = fxmlLoader.load(getClass().getResource(Constants.telaPrincipalFxml).openStream()); //Carregando o FXMLTelaPrincipal.fxml
-            controller = (FXMLTelaPrincipalController) fxmlLoader.getController(); //Definindo o controller da scene(FXMLTelaPrincipalController.java)
-	    Image applicationIcon = new Image(getClass().getResourceAsStream(Constants.iconeUnityManager));
-	    telaPrincipal.getIcons().add(applicationIcon);
-	    telaPrincipal.setTitle(Constants.tituloTelaPrincipal);
-            Scene scene = new Scene(root);
-            scene.getStylesheets().add(Constants.telaPrincipalCss);
-            telaPrincipal.setScene(scene);
-            controller.lblData.setText(dataSistema.dataAtual());
-            controller.lblUsuario.setText(dao.usuarioLogado());
-            telaPrincipal.show();
-        	
        }else {
-        	
         	JOptionPane.showMessageDialog(null, "Usuário Inexistente!");
         }
       

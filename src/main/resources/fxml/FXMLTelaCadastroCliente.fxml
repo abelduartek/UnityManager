@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<AnchorPane id="AnchorPane" prefHeight="562.0" prefWidth="615.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171" fx:controller="br.com.unitymanager.controller.FXMLTelaCadastroClienteController">
+    <stylesheets>
+        <URL value="@/styles/TelaCadastroCliente.css" />
+    </stylesheets>
+   <children>
+      <TitledPane animated="false" collapsible="false" prefHeight="518.0" prefWidth="615.0" text="Cadastro de Cliente">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="469.0" prefWidth="613.0">
+               <children>
+                  <TabPane prefHeight="500.0" prefWidth="615.0" tabClosingPolicy="UNAVAILABLE">
+                    <tabs>
+                      <Tab text="Informações Básicas">
+                        <content>
+                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="445.0" prefWidth="615.0">
+                                 <children>
+                                    <GridPane layoutX="14.0" layoutY="14.0" prefHeight="439.0" prefWidth="561.0">
+                                      <columnConstraints>
+                                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                      </columnConstraints>
+                                      <rowConstraints>
+                                        <RowConstraints maxHeight="1.7976931348623157E308" minHeight="10.0" prefHeight="15.0" vgrow="SOMETIMES" />
+                                        <RowConstraints minHeight="10.0" prefHeight="15.0" vgrow="SOMETIMES" />
+                                        <RowConstraints minHeight="10.0" prefHeight="15.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="15.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="15.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="15.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="15.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="15.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="15.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="15.0" vgrow="SOMETIMES" />
+                                      </rowConstraints>
+                                       <children>
+                                          <Label text="Código Cliente:" />
+                                          <Label text="CNPJ/CPF:" GridPane.rowIndex="1" />
+                                          <Label text="Razão Social/Nome:" GridPane.rowIndex="2" />
+                                          <Label text="Nome Fantasia:" GridPane.rowIndex="3" />
+                                          <Label text="Endereço:" GridPane.rowIndex="4" />
+                                          <Label text="Bairro:" GridPane.rowIndex="5" />
+                                          <Label text="UF:" GridPane.rowIndex="6" />
+                                          <Label text="CEP:" GridPane.rowIndex="7" />
+                                          <Label text="Personalidade Cliente:" GridPane.rowIndex="8" />
+                                          <Label text="Ramo de Atividade:" GridPane.rowIndex="9" />
+                                          <TextField editable="false" GridPane.columnIndex="1" />
+                                          <TextField GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                          <TextField GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                          <TextField GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                          <TextField GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                                          <TextField GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                                          <TextField GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                                          <TextField GridPane.columnIndex="1" GridPane.rowIndex="7" />
+                                          <ComboBox prefHeight="25.0" prefWidth="282.0" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+                                          <TextField GridPane.columnIndex="1" GridPane.rowIndex="9" />
+                                       </children>
+                                    </GridPane>
+                                 </children>
+                              </AnchorPane>
+                        </content>
+                      </Tab>
+                      <Tab text="Contato">
+                        <content>
+                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <GridPane layoutX="14.0" layoutY="14.0" prefHeight="439.0" prefWidth="561.0">
+                                      <columnConstraints>
+                                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                      </columnConstraints>
+                                      <rowConstraints>
+                                        <RowConstraints maxHeight="1.7976931348623157E308" minHeight="10.0" prefHeight="15.0" vgrow="SOMETIMES" />
+                                        <RowConstraints minHeight="10.0" prefHeight="15.0" vgrow="SOMETIMES" />
+                                        <RowConstraints minHeight="10.0" prefHeight="15.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="15.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="15.0" vgrow="SOMETIMES" />
+                                      </rowConstraints>
+                                       <children>
+                                          <Label text="Telefone:" />
+                                          <Label text="E-mail:" GridPane.rowIndex="1" />
+                                          <Label text="Contato:" GridPane.rowIndex="2" />
+                                          <Label text="E-mail TI:" GridPane.rowIndex="3" />
+                                          <Label text="Contato TI:" GridPane.rowIndex="4" />
+                                          <TextField GridPane.columnIndex="1" />
+                                          <TextField GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                          <TextField GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                          <TextField GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                          <TextField GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                                       </children>
+                                    </GridPane>
+                                 </children>
+                              </AnchorPane>
+                        </content>
+                      </Tab>
+                        <Tab text="Contato">
+                           <content>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <GridPane layoutX="14.0" layoutY="14.0" prefHeight="439.0" prefWidth="561.0">
+                                       <columnConstraints>
+                                          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                       </columnConstraints>
+                                       <rowConstraints>
+                                          <RowConstraints maxHeight="1.7976931348623157E308" minHeight="10.0" prefHeight="15.0" vgrow="SOMETIMES" />
+                                          <RowConstraints maxHeight="1.7976931348623157E308" minHeight="10.0" prefHeight="15.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="15.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="15.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="15.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                       </rowConstraints>
+                                       <children>
+                                          <Label text="Vendedor:" />
+                                          <Label text="Prioridade:" GridPane.rowIndex="1" />
+                                          <Label text="Data Cadastro:" GridPane.rowIndex="2" />
+                                          <Label text="Usuário:" GridPane.rowIndex="3" />
+                                          <Label text="Situação de Funcionamento:" GridPane.rowIndex="4" />
+                                          <TextField GridPane.columnIndex="1" />
+                                          <TextField GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                          <TextField GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                          <TextField GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                          <TextField GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                                          <TextField GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                                          <Label text="IE:" GridPane.rowIndex="5" />
+                                          <Label text="SLA:" GridPane.rowIndex="6" />
+                                          <TextField GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                                       </children>
+                                    </GridPane>
+                                 </children>
+                              </AnchorPane>
+                           </content>
+                        </Tab>
+                    </tabs>
+                  </TabPane>
+               </children>
+            </AnchorPane>
+        </content>
+      </TitledPane>
+   </children>
+</AnchorPane>
